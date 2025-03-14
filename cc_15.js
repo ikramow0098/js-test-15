@@ -10,3 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
  function addRiskItem(riskName, riskLevel, department) {
   const riskCard = document.createElement("div");
   riskCard.className = "riskCard";
+
+   // Task 3 - Removing Risk Items (Add Resolve button)
+   const resolveBtn = document.createElement("button");
+   resolveBtn.textContent = "Resolve";
+   resolveBtn.addEventListener("click", function (e) {
+     e.stopPropagation(); // Task 6 - Prevent unintended clicks
+     riskDashboard.removeChild(riskCard);
+   });
