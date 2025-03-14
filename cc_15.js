@@ -40,3 +40,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const deptEl = document.createElement("p");
   deptEl.textContent = `Department: ${department}`;
+
+   // Task 6 - Prevent event bubbling inside the risk card
+   riskCard.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+
+  riskCard.appendChild(nameEl);
+  riskCard.appendChild(levelEl);
+  riskCard.appendChild(deptEl);
+  riskCard.appendChild(resolveBtn);
+
+  riskDashboard.appendChild(riskCard);
+}
