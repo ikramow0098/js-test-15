@@ -55,4 +55,20 @@ riskCard.appendChild(resolveBtn);
 riskDashboard.appendChild(riskCard);
 }
 
+ // Task 2 - Handle form submission to add risk items
+ riskForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const riskName = document.getElementById("riskName").value;
+  const riskLevel = document.getElementById("riskLevel").value;
+  const department = document.getElementById("department").value;
+
+  if (riskLevel === "") {
+    alert("Please select a risk level.");
+    return;
+  }
+
+  addRiskItem(riskName, riskLevel, department);
+  riskForm.reset();
+});
+
 
