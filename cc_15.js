@@ -6,4 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const riskForm = document.getElementById("riskForm");
   const increaseRiskLevelsBtn = document.getElementById("increaseRiskLevels");
 
-  
+ // Task 2 - Adding Risk Items Dynamically
+ function addRiskItem(riskName, riskLevel, department) {
+  const riskCard = document.createElement("div");
+  riskCard.className = "riskCard";
