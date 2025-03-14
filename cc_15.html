@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Risk Management Dashboard</title>
+  <style>
+    /* Basic styling for the dashboard and risk cards */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .riskCard {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #riskForm {
+      margin: 20px 0;
+    }
+    #increaseRiskLevels {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Risk Management Dashboard</h1>
+
+  <!-- Container for risk items -->
+  <div id="riskDashboard"></div>
+
+  <!-- Form to add new risk items -->
+  <form id="riskForm">
+    <input
+      type="text"
+      id="riskName"
+      placeholder="Risk Name"
+      required
+    />
+    <select id="riskLevel" required>
+      <option value="">Select Risk Level</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <input
+      type="text"
+      id="department"
+      placeholder="Department"
+      required
+    />
+    <button type="submit">Add Risk</button>
+  </form>
+
+  <!-- Button for bulk updates -->
+  <button id="increaseRiskLevels">Increase Risk Levels</button>
+
+  <!-- Link to JavaScript -->
+  <script src="cc_15.js"></script>
+</body>
+</html>
