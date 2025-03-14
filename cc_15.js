@@ -18,3 +18,25 @@ document.addEventListener("DOMContentLoaded", function() {
      e.stopPropagation(); // Task 6 - Prevent unintended clicks
      riskDashboard.removeChild(riskCard);
    });
+
+   // Task 4 - Categorizing Risks by Level (Set background color)
+   switch (riskLevel) {
+    case "Low":
+      riskCard.style.backgroundColor = "green";
+      break;
+    case "Medium":
+      riskCard.style.backgroundColor = "yellow";
+      break;
+    case "High":
+      riskCard.style.backgroundColor = "red";
+      break;
+  }
+
+  const nameEl = document.createElement("h3");
+  nameEl.textContent = riskName;
+
+  const levelEl = document.createElement("p");
+  levelEl.textContent = `Risk Level: ${riskLevel}`;
+
+  const deptEl = document.createElement("p");
+  deptEl.textContent = `Department: ${department}`;
