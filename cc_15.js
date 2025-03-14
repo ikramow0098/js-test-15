@@ -71,4 +71,24 @@ riskDashboard.appendChild(riskCard);
   riskForm.reset();
 });
 
+// Task 5 - Implementing Bulk Updates (Increase Risk Levels)
+increaseRiskLevelsBtn.addEventListener("click", function () {
+  const riskCards = document.querySelectorAll(".riskCard");
+
+  riskCards.forEach((card) => {
+    const levelEl = card.querySelector("p");
+    let currentLevel = levelEl.textContent.replace("Risk Level: ", "");
+    let newLevel = currentLevel;
+
+    if (currentLevel === "Low") {
+      newLevel = "Medium";
+      card.style.backgroundColor = "yellow";
+    } else if (currentLevel === "Medium") {
+      newLevel = "High";
+      card.style.backgroundColor = "red";
+    }
+
+    levelEl.textContent = `Risk Level: ${newLevel}`;
+  });
+});
 
