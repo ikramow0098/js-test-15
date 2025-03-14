@@ -92,3 +92,22 @@ riskForm.addEventListener("submit", function (e) {
     });
   });
 });
+
+/*Task 1 - Base Structure Setup
+Set up the base HTML and JavaScript structure for the Risk Management Dashboard.
+
+Task 2 - Adding Risk Items Dynamically
+Implemented functionality to add risk items dynamically using a form.
+
+Task 3 - Removing Risk Items
+Added a "Resolve" button to remove risk items from the dashboard when clicked.
+
+Task 4 - Risk Categorization
+Applied background colors based on risk levels: Low (Green), Medium (Yellow), High (Red).
+
+Task 5 - Bulk Risk Updates
+Implemented a button to increase risk levels: Low → Medium, Medium → High.
+
+Task 6 - Event Propagation Fix
+Used stopPropagation() to prevent unintended clicks from affecting other elements.
+*/
